@@ -12,6 +12,7 @@ import {StyleSheet}from 'react-native';
  class Registro extends Component {
     render() {
     const navegar=this.props.navigation;
+    
     return (
       <Container>
         <Header />

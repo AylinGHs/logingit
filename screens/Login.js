@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Header, Content, Card, CardItem, Text, Body,Button,Input,Item,Icon} from 'native-base';
+import { Container, Header, Content, Card, CardItem, Text, Body,Button,Input,Item,Icon,Switch} from 'native-base';
 import {StyleSheet}from 'react-native';
 
  class Login extends Component {
@@ -7,11 +7,21 @@ import {StyleSheet}from 'react-native';
         super(props);
         this.state = {usuario: '', contra: ''};
       }
+      state={
+          showIndicator:false,
+      }
+      onButtonPress=()=>{
+          this.setState({
+              showIndicator:true
+          }),
+      this.props.navigation.navigate('Bienvenida',{contra:this.state.contra, usuario:this.state.usuario});
+      }
     render() {
     const navegar=this.props.navigation;
     return (
       <Container>
-        <Header />
+        <Header> <Text>Edith Aylin Guerrero Herrera TI02SM-18</Text></Header>
+        
         <Content contentContainerStyle = {styles.Content}>
           <Card>
             <CardItem header>
